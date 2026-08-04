@@ -139,7 +139,7 @@ TraceGuard/
 > These steps describe the intended developer workflow for running the pipeline from source. TraceGuard is not yet published as a packaged CLI or PyPI release — clone and run locally.
 
 ```bash
-git clone https://github.com/<your-org>/traceguard.git
+git clone https://github.com/montaha-abo-aisha/TraceGuard.git
 cd traceguard
 
 python3 -m venv venv
@@ -163,7 +163,7 @@ TraceGuard currently operates on exported Falco runtime events and Kubernetes au
 
 To execute the pipeline, provide a pair of compatible Falco and Kubernetes audit log files to the processing entry point.
 
-Example datasets are not included in this initial release and will be added in a future update.
+Example datasets are included under src/data/sample_scenarios/ for controlled evaluation.
 
 ---
 
