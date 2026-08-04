@@ -1,0 +1,53 @@
+
+[
+  {
+    "source": "falco",
+    "timestamp": "2026-04-26T14:01:09.811Z",
+    "rule": "Netcat Remote Code Execution in Container",
+    "priority": "Critical",
+
+    "user": "ubuntu",
+
+    "process": "nc",
+
+    "connection": {
+      "direction": "outbound",
+      "dest_ip": "185.77.12.44",
+      "dest_port": 4444
+    },
+
+    "container": {
+      "id": "a91f3d7b11ce",
+      "name": "web-app"
+    },
+
+    "k8s": {
+      "pod": "web-app-7f9c8d4c5b-xk92l",
+      "namespace": "production"
+    }
+  },
+
+  {
+    "source": "falco",
+    "timestamp": "2026-04-26T14:01:10.026Z",
+    "rule": "Terminal shell in container",
+    "priority": "High",
+
+    "user": "ubuntu",
+
+    "process": "bash",
+    "parent_process": "nc",
+
+    "container": {
+      "id": "a91f3d7b11ce",
+      "name": "web-app"
+    },
+
+    "k8s": {
+      "pod": "web-app-7f9c8d4c5b-xk92l",
+      "namespace": "production"
+    }
+  }
+]
+
+

